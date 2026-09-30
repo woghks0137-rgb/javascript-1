@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 연습</title>
+</head>
+
+<body>
+    <h2 id="score">점수</h2>
+    <h2 id="attendance">출석률</h2>
+
+    <button id="check">합격 확인</button>
+
+    <p id="result">결과가 아직 없습니다.</p>
+
+    <script>
+        const score = document.querySelector("#score");
+        const attendance = document.querySelector("#attendance");
+        const check = document.querySelector("#check");
+        const result = document.querySelector("#result");
+
+        let score01 = 75;
+        let attendance01 = 90;
+
+        check.addEventListener("click", function () {
+            if (score01 >= 80 && attendance01 >= 80) {
+                result.textContent = "합격입니다"
+            } else {
+                result.textContent = "불합격입니다."
+            }
+        })
+    </script>
+</body>
+
+</html>

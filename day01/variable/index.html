@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 클릭하면 인사말 바꾸기</title>
+</head>
+
+<body>
+    <h2 id="title">안녕하세요</h2>
+    <button id="btn">클릭하세요</button>
+    <!-- 예제 1번 -->
+
+    <h2 id="text">현재 상태</h2>
+    <button id="btn01">확인</button>
+    <!-- 예제 2번 -->
+
+    <h2 id="count">0</h2>
+    <button id="plus">+1</button>
+    <!-- 예제 3번 -->
+
+    <h2 id="count01">0</h2>
+    <button id="plus01">+1</button>
+    <p id="message">아직 5가 아닙니다.</p>
+    <!-- 예제 4번 -->
+
+
+    <script>
+        const title = document.querySelector("#title");
+        const btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", function () {
+            title.innerHTML = "반가워요"
+        })
+        /* 예제 1번 */
+
+
+        const text = document.querySelector("#text");
+        const btn01 = document.querySelector("#btn01");
+        btn01.addEventListener("click", function () {
+            text.textContent = "공부 시작 1"
+        })
+        /* 예제 2번 */
+
+        const countpage = document.querySelector("#count");
+        const plus = document.querySelector("#plus");
+        let count = 0;
+        plus.addEventListener("click", function () {
+            count += 1;
+            countpage.textContent = count;
+        })
+        /* 예제 3번 */
+
+        const result = document.querySelector("#count01");
+        const btnPlus = document.querySelector("#plus01");
+        const message = document.querySelector("#message");
+        let count0
+        btnPlus.addEventListener("click", () => {
+            count += 1;
+            result.textContent = count;
+            if (count === 5) {
+                message.textContent = "5가 되었습니다."
+            }
+        })
+    </script>
+</body>
+
+</html>

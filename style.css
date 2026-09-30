@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: #010815;
+    color: white;
+}
+
+.projects {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.projects h1 {
+    width: 1200px;
+    margin: 0 auto 50px;
+}
+
+/* 보여지는 영역 */
+.projects-slider {
+    width: 1200px;
+    margin: 0 auto;
+
+    padding: 20px 0;
+    overflow: hidden;
+
+    border: 1px solid #555;
+}
+
+/* 실제로 움직일 레일 */
+.projects-list {
+    display: flex;
+    gap: 20px;
+}
+
+/* 각각의 카드 */
+.projects-item {
+    flex-shrink: 0;
+
+    width: 280px;
+    height: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #7375fd;
+    border-radius: 10px;
+
+    background: #071525;
+
+    transition: 0.3s;
+}
+
+.projects-item:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 20px rgba(115, 170, 255, 0.5),
+        0 0 40px rgba(115, 117, 253, 0.3);
+}
+
+.projects-item h2 {
+    font-size: 20px;
+}
