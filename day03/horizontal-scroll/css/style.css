@@ -1,0 +1,28 @@
+.viewport {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 1s ease;
+
+}
+
+.track.move {
+    transform: translateX(-100vw);
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.section3 {
+    width: 100vw;
+    height: 100vh;
+    background: cornflowerblue;
+}
