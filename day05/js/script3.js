@@ -50,9 +50,9 @@ function updateProducts() {
             return item.stock >= 1
         })
         searchResult = stock
-    } else if ()
+    }
 
-        renderProducts(searchResult);
+    renderProducts(searchResult);
 }
 
 searchInput.addEventListener("input", () => {
